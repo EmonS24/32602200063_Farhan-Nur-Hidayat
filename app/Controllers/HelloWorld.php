@@ -4,8 +4,8 @@ namespace App\Controllers;
 
 class HelloWorld extends BaseController
 {
-    public function halodunia()
+    public function index()
     {
-        return "<h1>Hello World</h1>";
+        return view('halloworld');
     }
 }

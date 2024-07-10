@@ -7,3 +7,6 @@ use CodeIgniter\Router\RouteCollection;
  */
 $routes->get('/form', 'Form::index');
 $routes->match(['post'], '/form-submit', 'FormController::submit');
+
+
+$routes->get('.latihanview', 'HelloWorld::index');
