@@ -18,3 +18,9 @@ $routes->get('/profile', 'ProfileController::index');
 $routes->get('/experience', 'ExperienceController::index');
 
 $routes->get('/bab5', 'Layout::index');
+
+//bab 6
+$routes->get('/crud', 'Crud::index');
+$routes->get('/crud/tambah', 'Crud::tambah');
+$routes->get('/crud/hapus', 'Crud::hapus');
+$routes->get('/crud/edit', 'Crud::edit');
