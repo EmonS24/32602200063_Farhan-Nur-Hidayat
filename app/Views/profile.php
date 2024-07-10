@@ -7,6 +7,8 @@
 <?= $this->extend('layout') ?>
 
 <?= $this->section('content') ?>
-<h2>Profiel</h2>
-<p>Farhan Nur Hidayat</p>
+<h2>Profile</h2><br><br>
+<p>Farhan Nur Hidayat</p><br>
+<p>Nim : 32602200063</p><br>
+<br><br><br>
 <?= $this->endSection() ?>
