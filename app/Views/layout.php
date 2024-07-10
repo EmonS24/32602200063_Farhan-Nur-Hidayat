@@ -26,7 +26,7 @@
         <?= $this->renderSection('content') ?>
     </main>
     <footer>
-        <p>Copyright &copy; My Website <?= date('Y') ?></p>
+        <p>Copyright &copy; EmonS24 <?= date('Y') ?></p>
     </footer>
 </body>
 

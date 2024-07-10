@@ -7,10 +7,17 @@
 <?= $this->extend('layout') ?>
 
 <?= $this->section('content') ?>
-<h2>My Experience</h2>
+<h2>Experiences & Skills</h2><br>
+<h3>Experiences</h3>
 <ul>
-    <li>Proficient in HTML, JavaScript, CSS</li>
     <li>Familiar with frameworks like CodeIgniter</li>
     <li>Have experience with language such as java, phyton, c/c++, etc</li>
-</ul>
+    <li>Can work as a team (maybe)</li>
+</ul><br>
+<h3>Skills</h3>
+<ul>
+    <li>Java, Phyton, C/C++</li>
+    <li>PHP, MySQL</li>
+    <li>HTML, JavaScript, CSS</li>
+</ul><br><br>
 <?= $this->endSection() ?>
