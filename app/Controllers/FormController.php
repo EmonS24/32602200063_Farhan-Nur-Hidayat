@@ -7,11 +7,11 @@ class FormController extends BaseController
     public function submit()
     {
         $nama = $this->request->getPost('nama');
-        $nama = $this->request->getPost('nim');
-        $nama = $this->request->getPost('kelas');
-        $nama = $this->request->getPost('matakuliah');
-        $nama = $this->request->getPost('dosen');
-        $nama = $this->request->getPost('asisten');
+        $nim = $this->request->getPost('nim');
+        $kelas = $this->request->getPost('kelas');
+        $matakuliah = $this->request->getPost('matakuliah');
+        $dosen = $this->request->getPost('dosen');
+        $asisten = $this->request->getPost('asisten');
 
         return view('result', compact('nama', 'nim', 'kelas', 'matakuliah', 'dosen', 'asisten'));
     }
