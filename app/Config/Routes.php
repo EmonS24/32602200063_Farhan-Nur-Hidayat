@@ -17,4 +17,4 @@ $routes->get('/', 'HomeController::index');
 $routes->get('/profile', 'ProfileController::index');
 $routes->get('/experience', 'ExperienceController::index');
 
-$routes->get('/layout', 'Layout::index');
+$routes->get('/bab5', 'Layout::index');

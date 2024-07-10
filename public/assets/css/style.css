@@ -1,0 +1,116 @@
+/* public/assets/css/style.css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner,
+.navbar {
+    padding: 40px 70px;
+    background-color: #f1f0ec;
+    text-align: center;
+}
+
+.navbar-icon {
+    flex-grow: 1;
+}
+
+.navbar-page {
+    flex-grow: 2;
+}
+
+.navbar-sosmed {
+    flex-grow: 1;
+}
+
+.navbar-page li,
+.navbar-sosmed li {
+    display: inline;
+}
+
+.navbar-page ul {
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.navbar-page li {
+    margin: 0px 20px;
+}
+
+.navbar-page a {
+    text-decoration: none;
+    color: black;
+}
+
+.fa-brands {
+    margin-right: 5px;
+}
+
+.banner {
+    line-height: 350%;
+    width: 100%;
+}
+
+.name {
+    letter-spacing: 3px;
+    font-size: 50px;
+    font-weight: 1000;
+}
+
+.description {
+    opacity: 0.5;
+    font-size: 15px;
+    line-height: 250%;
+}
+
+.about {
+    background-color: #130e0b;
+    color: #fafafa;
+    padding: 70px;
+}
+
+.experiences {
+    background-color: #130e0b;
+    color: #fafafa;
+    padding: 70px;
+}
+
+.about-me,
+.experience {
+    max-width: 1600px;
+    margin: 70px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.about-me {
+    text-align: center;
+}
+
+.about-experience-list table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+
+}
+
+.about-experience-list th,
+.about-experience-list td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.about-experience-list th {
+    background-color: #333;
+    color: #fff;
+}
