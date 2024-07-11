@@ -21,13 +21,25 @@ class Crud extends BaseController
     }
     public function tambah()
     {
-
-        if (isset($_POST['nim'])) {
-
+        if (
+            isset($_POST['nim'])
+            && isset($_POST['nama'])
+            && isset($_POST['prodi'])
+            && isset($_POST['universitas'])
+            && isset($_POST['nomor_handphone'])
+        ) {
             $nim = $_POST['nim'];
+            $nama = $_POST['nama'];
+            $prodi = $_POST['prodi'];
+            $universitas = $_POST['universitas'];
+            $nomor_handphone = $_POST['nomor_handphone'];
 
             $upload = [
-                'nim' => $nim
+                'nim' => $nim,
+                'nama' => $nama,
+                'prodi' => $prodi,
+                'universitas' => $universitas,
+                'nomor_handphone' => $nomor_handphone,
             ];
 
             $this->db->insert($upload);
@@ -37,20 +49,44 @@ class Crud extends BaseController
             return view('crud/upload');
         }
     }
-    public function edit($nim)
+
+    public function edit($id)
     {
+        $nim = $id;
         $a = $this->db->find($nim);
-        $data = ['edit' => $a];
-        return view('crud/edit', $data);
+        $data = [
+            'edit' => $a
+        ];
+        return view("crud/edit", $data);
     }
 
     public function editan()
     {
-        $nim = $this->request->getPost('nim');
-        $newNim = $this->request->getPost('newNim');
+        $nim = $_POST['nim'];
+        $newNim = $_POST['newNim'];
+        $nama = $_POST['nama'];
+        $newNama = $_POST['newNama'];
+        $prodi = $_POST['prodi'];
+        $newProdi = $_POST['newProdi'];
+        $universitas = $_POST['universitas'];
+        $newUniversitas = $_POST['newUniversitas'];
+        $nomor_handphone = $_POST['nomor_handphone'];
+        $newNo_hp = $_POST['newNo_hp'];
+
         $this->db->where('nim', $nim)
             ->set('nim', $newNim)
+            ->set('nama', $newNama)
+            ->set('prodi', $newProdi)
+            ->set('universitas', $newUniversitas)
+            ->set('nomor_handphone', $newNo_hp)
             ->update();
         return redirect()->to(base_url('/crud'));
+    }
+
+    public function hapus($id)
+    {
+        $nim = $id;
+        $this->db->delete($nim);
+        return redirect()->to('/crud');
     }
 }

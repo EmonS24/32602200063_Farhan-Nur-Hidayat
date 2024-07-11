@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class MahasiswaModel extends Model
 {
     protected $table = 'tb_mahasiswa';
-    protected $primarykey = 'nim';
+    protected $primaryKey = 'nim';
 
     protected $allowedFields = [
         'nim',

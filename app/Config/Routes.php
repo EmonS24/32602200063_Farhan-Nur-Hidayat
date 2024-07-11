@@ -21,8 +21,7 @@ $routes->get('/bab5', 'Layout::index');
 
 //bab 6
 $routes->get('/crud', 'Crud::index');
-$routes->get('/crud/tambah', 'Crud::tambah');
 $routes->match(['get', 'post'], '/crud/tambah', 'Crud::tambah');
-$routes->get('/crud/hapus', 'Crud::hapus');
+$routes->get('/crud/hapus/(:segment)', 'Crud::hapus/$1');
 $routes->get('/crud/edit/(:segment)', 'Crud::edit/$1');
 $routes->post('/crud/editan', 'Crud::editan');

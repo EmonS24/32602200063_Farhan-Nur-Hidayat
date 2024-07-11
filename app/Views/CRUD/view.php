@@ -33,13 +33,14 @@
                 foreach ($mahasiswa as $a) { ?>
                     <tr>
                         <td><?= $i++; ?></td>
-                        <td></td>
+                        <td><?= $a['nama']; ?></td>
                         <td><?= $a['nim']; ?></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td><?= $a['prodi']; ?></td>
+                        <td><?= $a['universitas']; ?></td>
+                        <td><?= $a['nomor_handphone']; ?></td>
                         <td class="action">
-                            <a href="#"><button class="btn-delete">Delete</button></a>
+                            <a href="crud/hapus/<?= $a['nim']; ?>"><button class="btn-delete"
+                                    onclick="return confirm('Are you sure to delete nim <?= $a['nim'] ?> ?')">Delete</button></a>
                             <a href="edit/<?= $a['nim']; ?>"><button class="btn-update">Update</button></a>
                         </td>
                     </tr>

@@ -30,8 +30,8 @@
                 <input type="text" name="universitas" id="universitas">
             </div>
             <div class="input">
-                <label for="no_hp">No Handphone</label>
-                <input type="no_hp" name="no_hp" id="no_hp">
+                <label for="nomor_handphone">No Handphone</label>
+                <input type="text" name="nomor_handphone" id="nomor_handphone">
             </div>
             <div class="button">
                 <button type="submit" value="Submit">Submit</button>
