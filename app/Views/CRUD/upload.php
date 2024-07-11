@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php $this->extend('layouts/template'); ?>
+<?php $this->extend('layout/template'); ?>
 <?php $this->section('content'); ?>
 
 <main>

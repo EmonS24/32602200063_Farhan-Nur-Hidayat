@@ -13,7 +13,11 @@ class Crud extends BaseController
     }
     public function index()
     {
-        return view('crud/view');
+        $all = $this->db->findAll();
+        $data = [
+            'mahasiswa' => $all
+        ];
+        return view('crud/view', $data);
     }
     public function tambah()
     {
@@ -33,8 +37,22 @@ class Crud extends BaseController
             return view('crud/upload');
         }
     }
-    public function edit()
+    public function edit($id)
     {
-        return view('crud/edit');
+        $nim = $id;
+        $a = $this->db->find($nim);
+        $data = [
+            'edit' => $a
+        ];
+        return view('crud/edit', $data);
+    }
+    public function editan()
+    {
+        $nim = $_POST['nim'];
+        $newNim = $_POST['newNim'];
+        $this->db->where('nim', $nim)
+            ->set('nim', $newNim)
+            ->update();
+        return redirect()->to(base_url('/crud'));
     }
 }

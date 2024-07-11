@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php $this->extend('layouts/template'); ?>
+<?php $this->extend('layout/template'); ?>
 <?php $this->section('content'); ?>
 
 <main>
@@ -23,18 +23,28 @@
                 <th>No HP</th>
                 <th>Action</th>
             </tr>
-            <tr>
-                <td>1</td>
-                <td>Farhan</td>
-                <td>32602200063</td>
-                <td>Teknik Informatika</td>
-                <td>Unissula</td>
-                <td>087769402498</td>
-                <td class="action">
-                    <a href="#"><button class="btn-delete">Delete</button></a>
-                    <a href="#"><button class="btn-update">Update</button></a>
-                </td>
-            </tr>
+            <?php
+            if (empty($mahasiswa)) { ?>
+                <tr>
+                    <td colspan="7"> Tidak ada data </td>
+                </tr>
+            <?php } else {
+                $i = 1;
+                foreach ($mahasiswa as $a) { ?>
+                    <tr>
+                        <td><?= $i++; ?></td>
+                        <td></td>
+                        <td><?= $a['nim']; ?></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="action">
+                            <a href="#"><button class="btn-delete">Delete</button></a>
+                            <a href="edit/<?= $a['nim']; ?>"><button class="btn-update">Update</button></a>
+                        </td>
+                    </tr>
+                <?php }
+            } ?>
         </table>
     </div>
 </main>
