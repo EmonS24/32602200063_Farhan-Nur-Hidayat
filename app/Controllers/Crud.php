@@ -37,19 +37,17 @@ class Crud extends BaseController
             return view('crud/upload');
         }
     }
-    public function edit($id)
+    public function edit($nim)
     {
-        $nim = $id;
         $a = $this->db->find($nim);
-        $data = [
-            'edit' => $a
-        ];
+        $data = ['edit' => $a];
         return view('crud/edit', $data);
     }
+
     public function editan()
     {
-        $nim = $_POST['nim'];
-        $newNim = $_POST['newNim'];
+        $nim = $this->request->getPost('nim');
+        $newNim = $this->request->getPost('newNim');
         $this->db->where('nim', $nim)
             ->set('nim', $newNim)
             ->update();
